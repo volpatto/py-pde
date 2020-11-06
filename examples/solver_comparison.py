@@ -35,7 +35,7 @@ print(controller2.diagnostics)
 print()
 
 # try the standard scikits.odes solver
-solver3 = pde.SkOdesSolver(eq, method='dopri5')
+solver3 = pde.SkOdesSolver(eq)
 controller3 = pde.Controller(solver3, t_range=1, tracker=None)
 sol3 = controller3.run(field)
 sol3.label = "scikits.odes solver"
