@@ -8,9 +8,11 @@ Solvers define how a pde is solved, i.e., advanced in time.
    ~explicit.ExplicitSolver
    ~implicit.ImplicitSolver
    ~scipy.ScipySolver
+   ~skodes.SkOdesSolver
    ~registered_solvers
    
-.. codeauthor:: David Zwicker <david.zwicker@ds.mpg.de> 
+.. codeauthor:: David Zwicker <david.zwicker@ds.mpg.de>
+                Diego Volpatto <dtvolpatto@gmail.com>
 """
 
 from typing import List
@@ -19,6 +21,7 @@ from .controller import Controller
 from .explicit import ExplicitSolver
 from .implicit import ImplicitSolver
 from .scipy import ScipySolver
+from .skodes import SkOdesSolver
 
 
 def registered_solvers() -> List[str]:
@@ -37,5 +40,6 @@ __all__ = [
     "ExplicitSolver",
     "ImplicitSolver",
     "ScipySolver",
+    "SkOdesSolver",
     "registered_solvers",
 ]
